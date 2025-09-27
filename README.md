@@ -551,3 +551,10 @@ Scale Deployment:
 ❌	 Establish escalation procedures
 
 ❌	 Create playbooks for common scenarios
+
+
+https://learn.microsoft.com/en-us/defender-endpoint/onboard-client
+https://learn.microsoft.com/en-us/defender-xdr/investigate-incidents
+https://learn.microsoft.com/en-us/defender-vulnerability-management/tvm-manage-log4shell-guidance
+
+
