@@ -21,10 +21,14 @@ This repository documents how deployment of Microsoft Defender for Endpoint on a
 ----------------------------------------------------------------------------
 ***Project Objectives***
 
-✔️ Deploy Microsoft Defender for Endpoint across Windows 10/11 environment
-✔️ Configure device discovery and threat detection capabilities
-✔️ Enable Log4j2 vulnerability detection (CVE-2021-44228)
-✔️ Validate deployment through test detection scenarios
+✔️ Deploy Microsoft Defender for Endpoint across Windows 10/11 environment.
+
+✔️ Configure device discovery and threat detection capabilities.
+
+✔️ Enable Log4j2 vulnerability detection (CVE-2021-44228).
+
+✔️ Validate deployment through test detection scenarios.
+
 ✔️ Establish incident response workflows
 
 ----------------------------------------------------------------------------
