@@ -1,4 +1,4 @@
-# Microsoft-Defender-for-Endpoint-Deployment-on-Windows-10-11-device
+<img width="1455" height="948" alt="Incident alert dashboard" src="https://github.com/user-attachments/assets/b48fd668-ddbc-4417-af68-2eab5912868e" /># Microsoft-Defender-for-Endpoint-Deployment-on-Windows-10-11-device
 This repository documents how deployment of Microsoft Defender for Endpoint on a Windows 11 device, including onboarding via local script, enabling device discovery, configuring Log4j2 detection (CVE-2021-44228), and validating incident response workflows.
 
 ------------------------------------------------------------------------------
@@ -133,9 +133,11 @@ Select Deployment Method:
 
 Script Details:
 
-File name: GatewayWindowsDefenderATPOnboardingScript.cmd
-Contains unique organization-specific configuration
-Valid for 30 days from generation
+✔️  File name: GatewayWindowsDefenderATPOnboardingScript.cmd
+
+✔️ Contains unique organization-specific configuration
+
+✔️Valid for 30 days from generation
 
 -----------------------------------------------------------------------------------
 
@@ -172,7 +174,9 @@ Check Device Status in Portal:
 
 ✔️	Locate newly onboarded Windows 10/11 device
 
-✔️	Verify status shows as "Active"
+✔️	Verify status shows as "Active" as shown below
+
+<img width="1486" height="926" alt="image" src="https://github.com/user-attachments/assets/8fd47a76-4711-4846-b758-3799240fdb0f" />
 
 ✔️	Confirm last seen timestamp is recent
 
@@ -182,7 +186,9 @@ Device Information Validation:
 
 ✔️	Operating system shows Windows 11
 
-✔️	Risk level initially shows as "Low"
+✔️	Risk level initially shows as "medium" (due to the tested script executed)
+
+<img width="1455" height="921" alt="image" src="https://github.com/user-attachments/assets/0df9f43b-0cb9-47b0-b50b-e8b04096c1ba" />
 
 ✔️	Onboarding status: "Successfully onboarded"
 
@@ -300,6 +306,8 @@ Detailed Analysis:
 
 ✔️ Analyze behavioral patterns
 
+<img width="1455" height="948" alt="Incident alert dashboard" src="https://github.com/user-attachments/assets/c3479a96-9daa-42cd-9c24-a11eab7b3a38" />
+
 -----------------------------------------------------------------------------------------
 ***4.3 Investigation Steps***
 
@@ -333,12 +341,16 @@ File Analysis (if applicable):
 -------------------------------------------------------------------------------------
 
 ****Phase 5: Remediation and Response Actions***
+
 5.1 Available Response Actions
+
 Device-Level Actions:
 
 ✔️ Isolate device from network
 
-✔️ Run antivirus scan
+✔️ Run antivirus scan (shown below here)
+
+<img width="1450" height="923" alt="image" src="https://github.com/user-attachments/assets/e2d152d7-95bc-4b77-8d94-33cd1a2e03a3" />
 
 ✔️ Collect investigation package
 
@@ -358,7 +370,9 @@ File-Level Actions:
 
 Acknowledge the Alert:
 
-✔️ Change status from "New" to "In progress"
+✔️ Change status from "New" to "In progress" as shown below
+
+<img width="1455" height="948" alt="Incident alert dashboard" src="https://github.com/user-attachments/assets/817057f2-4f38-4d9b-b8e1-d16a3d01a014" />
 
 ✔️ Assign to security analyst
 
@@ -368,6 +382,8 @@ Acknowledge the Alert:
 ***Simulate Response Action:
 
    Actions → Run antivirus scan → Confirm
+
+   <img width="1453" height="936" alt="image" src="https://github.com/user-attachments/assets/253f8e94-46fc-48a3-9485-b69411ac4fd7" />
 
 Document Findings:
 
