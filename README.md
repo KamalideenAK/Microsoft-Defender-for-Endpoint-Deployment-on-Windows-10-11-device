@@ -6,11 +6,15 @@ This repository documents how deployment of Microsoft Defender for Endpoint on a
 
 ✅ Local script onboarding for Windows 10/11
 
+
 🔍 Standard device discovery setup
+
 
 🧨 Log4j2 vulnerability detection
 
+
 📈 Alert validation and incident response
+
 
 📋 Remediation workflow using Defender tools
 
