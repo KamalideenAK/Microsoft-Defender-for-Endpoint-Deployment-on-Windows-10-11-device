@@ -35,15 +35,20 @@ This repository documents how deployment of Microsoft Defender for Endpoint on a
 ***System Requirements***
 
 ✔️ Windows 11 Pro/Enterprise (latest updates applied)
+
 ✔️ Microsoft 365 E3/E5 or Microsoft Defender for Endpoint Plan 1/2 license
+
 ✔️ Administrative privileges on target devices
+
 ✔️ Network connectivity to Microsoft cloud services
 
 ------------------------------------------------------------------------------
 ***Required Permissions***
 
 ✔️ Global Administrator or Security Administrator in Microsoft 365
+
 ✔️ Local Administrator rights on Windows 11 devices
+
 ✔️ Access to Microsoft 365 Defender portal
 
 -------------------------------------------------------------------------------
@@ -53,7 +58,9 @@ This repository documents how deployment of Microsoft Defender for Endpoint on a
 1.1 Access Microsoft 365 Defender Portal
 
 ✅ Navigate to https://security.microsoft.com
+
 ✅ Sign in with administrative credentials
+
 ✅ Verify licensing and service availability
 
 ---------------------------------------------------------------------------------
@@ -67,13 +74,18 @@ Navigate to Device Discovery:
 Configure Standard Discovery:
 
 ✅ Select "Standard discovery" option
+
 ✅ Enable network device discovery
+
 ✅ Set discovery frequency to recommended settings
+
 ✅ Configure network credentials if required
 
 
 ✅Save Configuration:
+
 ✅Apply settings and wait for confirmation
+
 ✅Verify discovery scope covers target network segments
 
 
@@ -87,14 +99,18 @@ Access Advanced Features:
 Enable CVE-2021-44228 Detection:
 
 ❌ Toggle "Custom network indicators" to ON
+
 ❌ Enable "Live response" for advanced investigation
+
 ❌ Activate "Automated investigation and remediation"
 
 
 Configure Detection Rules:
 
 ✅ Navigate to Hunting → Advanced hunting
+
 ✅ Verify Log4j2 detection queries are active
+
 ✅ Customize detection sensitivity if needed
 
 ----------------------------------------------------------------------------------
@@ -110,7 +126,9 @@ Navigate to Onboarding Section:
 Select Deployment Method:
 
 ✅ Choose "Local Script" as deployment method
+
 ✅ Select Windows 10/11 as operating system
+
 ✅ Click "Download onboarding package"
 
 Script Details:
@@ -151,15 +169,21 @@ powershell   # Check Windows Defender ATP service
 Check Device Status in Portal:
 
 ✔️	Navigate to Assets → Devices
+
 ✔️	Locate newly onboarded Windows 10/11 device
+
 ✔️	Verify status shows as "Active"
+
 ✔️	Confirm last seen timestamp is recent
 
 Device Information Validation:
 
 ✔️	Computer name matches target device
+
 ✔️	Operating system shows Windows 11
+
 ✔️	Risk level initially shows as "Low"
+
 ✔️	Onboarding status: "Successfully onboarded"
 
 ------------------------------------------------------------------------------------------------------------------
@@ -224,8 +248,11 @@ cmd   # Simple command line test for detection
 ***3.3 Monitor for Alert Generation***
 Expected Timeline: Alerts typically appear within 5-15 minutes
 Monitoring Steps:
+
 ✔️ Keep the Microsoft 365 Defender portal open
+
 ✔️ Refresh the incidents page periodically
+
 ✔️ Look for new alerts related to the test device
 
 -----------------------------------------------------------------------------
@@ -233,12 +260,15 @@ Monitoring Steps:
 ***4.1 Navigate to Incidents and Alerts***
 
 Access Investigation Interface:
+
   ❌ Investigation & response → Incidents & alerts → Incidents
 
 Locate Test Alert:
 
 ❌ Filter by affected device name
+
 ❌ Sort by "Last update time" (newest first)
+
 ❌ Look for incidents with "Low" or "Medium" severity
 
 -------------------------------------------------------------------------------
@@ -248,18 +278,26 @@ Locate Test Alert:
 Alert Information Review:
 
 ❌ Alert Title: Note the detection name
+
 ❌ Severity Level: Typically Low/Medium for test
+
 ❌ Category: Suspicious activity or behavior
+
 ❌ Source: Microsoft Defender for Endpoint
+
 ❌ Affected Assets: Target Windows 10/11 device
 
 ----------------------------------------------------------
 Detailed Analysis:
+
 ❌ Click on incident → Expand alert details
 
 ✔️ Review timeline of events
+
 ✔️ Examine process tree
+
 ✔️ Check file and network indicators
+
 ✔️ Analyze behavioral patterns
 
 -----------------------------------------------------------------------------------------
@@ -268,21 +306,28 @@ Detailed Analysis:
 Device Investigation:
 
 ✔️ Click on affected device name
+
 ✔️ Review device timeline
+
 ✔️ Check running processes
+
 ✔️ Examine recent network connections
 
 Process Analysis:
 
 ✔️ Identify parent and child processes
+
 ✔️ Review command line arguments
+
 ✔️ Check process reputation and prevalence
 
 
 File Analysis (if applicable):
 
 ✔️ Examine file properties
+
 ✔️ Check file hash reputation
+
 ✔️ Review file behavior analysis
 
 -------------------------------------------------------------------------------------
@@ -292,15 +337,21 @@ File Analysis (if applicable):
 Device-Level Actions:
 
 ✔️ Isolate device from network
+
 ✔️ Run antivirus scan
+
 ✔️ Collect investigation package
+
 ✔️ Initiate live response session
 
 File-Level Actions:
 
 ✔️ Quarantine suspicious files
+
 ✔️ Block file execution
+
 ✔️ Add to indicators list
+
 ✔️ Submit for deep analysis
 
 *****5.2 Test Remediation Process****
@@ -308,7 +359,9 @@ File-Level Actions:
 Acknowledge the Alert:
 
 ✔️ Change status from "New" to "In progress"
+
 ✔️ Assign to security analyst
+
 ✔️ Add investigation notes
 
 
@@ -319,8 +372,11 @@ Acknowledge the Alert:
 Document Findings:
 
 ✔️ Classification: Test/False positive
+
 ✔️ Root cause: Authorized security testing
+
 ✔️ Resolution: No action required
+
 ✔️Status: Resolved
 
 ------------------------------------------------------------------------------------------
@@ -329,8 +385,11 @@ Document Findings:
 Final Steps:
 
 ✔️ Update incident classification
+
 ✔️ Set determination to "Security testing"
+
 ✔️ Add closure notes
+
 ✔️ Change status to "Resolved"
 
 
@@ -340,12 +399,19 @@ Final Steps:
 6.1 Deployment Validation Checklist
 
  ✔️ Windows 11 device successfully onboarded
+ 
  ✔️ Device appears in MDE portal with "Active" status
+ 
  ✔️ Standard discovery configured and operational
+ 
  ✔️ Log4j2 detection capabilities enabled
+ 
  ✔️ Test detection script executed successfully
+ 
  ✔️ Alert generated and visible in incidents queue
+ 
  ✔️ Alert investigation completed
+ 
  ✔️ Response actions tested and documented
 
 ---------------------------------------------------------------------------------------------
@@ -354,14 +420,18 @@ Final Steps:
 Fine-tune Detection Rules:
 
 ✔️  Adjust sensitivity based on environment
+
 ✔️  Configure custom indicators if needed
+
 ✔️  Set up automated response actions
 
 
 Establish Monitoring Procedures:
 
 ✔️ Configure alert notification rules
+
 ✔️ Set up regular device health checks
+
 ✔️ Implement incident response workflows
 
 
@@ -401,21 +471,27 @@ Best Practices
 
 **Network Security:**
 ❌	 Ensure encrypted communication to Microsoft cloud
+
 ❌	 Configure firewall rules for required endpoints
+
 ❌	 Monitor for certificate validation errors
 
 
 **Access Control:**
 
 ❌	 Implement least-privilege access
+
 ❌	 Use role-based permissions
+
 ❌	 Enable multi-factor authentication
 
 
 **Data Protection:**
 
 ❌	 Review data collection policies
+
 ❌	 Configure data retention settings
+
 ❌	 Ensure compliance with regulations
 
 
@@ -424,8 +500,11 @@ Best Practices
 This deployment successfully demonstrates:
 
 ❌	 Complete MDE onboarding process for Windows 10/11
+
 ❌	 Proper configuration of detection capabilities
+
 ❌	 Functional alert generation and investigation workflow
+
 ❌	 Effective incident response procedures
 
 The environment is now ready for production security monitoring and threat detection operations.
@@ -435,19 +514,25 @@ Next Steps
 Scale Deployment:
 
 ❌	 Plan rollout to additional devices
+
 ❌	 Implement Group Policy or Intune deployment
+
 ❌	 Configure automated onboarding processes
 
 
 ***Enhance Monitoring:***
 
 ❌	 Set up custom hunting queries
+
 ❌	 Configure automated investigation rules
+
 ❌	 Implement threat intelligence feeds
 
 
 ***Team Training:***
 
 ❌	 Conduct incident response training
+
 ❌	 Establish escalation procedures
+
 ❌	 Create playbooks for common scenarios
